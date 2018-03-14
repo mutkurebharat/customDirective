@@ -1,0 +1,62 @@
+<table>
+    <thead>
+        <!-- <tr>
+            <th ng-click="sortData('userId')">
+                User ID<div ng-class="getSortClass('userId')"></div>
+            </th>
+            <th ng-click="sortData('id')">
+                ID<div ng-class="getSortClass('id')"></div>
+            </th>
+            <th ng-click="sortData('title')">
+                Title<div ng-class="getSortClass('title')"></div>
+            </th>
+            <th ng-click="sortData('completed')">
+                Status<div ng-class="getSortClass('completed')"></div>
+            </th>
+        </tr> -->
+        <tr>
+            <th ng-click="sortData('name')">
+                User ID<div ng-class="getSortClass('name')"></div>
+            </th>
+            <th ng-click="sortData('gender')">
+                ID<div ng-class="getSortClass('gender')"></div>
+            </th>
+            <th ng-click="sortData('salary')">
+                Title<div ng-class="getSortClass('salary')"></div>
+            </th>
+            <!-- <th ng-click="sortData('completed')">
+                Status<div ng-class="getSortClass('completed')"></div>
+            </th> -->
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in employees | orderBy:sortColum:reverseSort | filter:searchText:exactMatch">
+            <!-- <div ng-show"$index < 5"> -->
+
+                <!-- <td>
+                    {{employee.userId}}
+                </td>
+                <td>
+                    {{employee.id}}
+                </td>
+                <td>
+                    {{employee.title}}
+                </td>
+                <td>
+                    {{employee.completed}}
+                </td> -->
+                <td>
+                    {{employee.name}}
+                </td>
+                <td>
+                    {{employee.gender}}
+                </td>
+                <td>
+                    {{employee.salary}}
+                </td>
+
+            <!-- </div> -->
+        </tr>
+    </tbody>
+</table>

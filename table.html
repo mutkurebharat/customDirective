@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Directive AngularJS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="table.css">
+    </head>
+    <body ng-app="myModule">
+        <div ng-controller="myController">
+            Search : <input id="size" type="text" placeholder="Search employees"
+                        ng-model="searchText" />
+            <input type="checkbox" ng-model="exactMatch" /> Exact Match
+            <br><br>
+            <div my-directive></div>
+            <div my-directive></div>
+        </div>
+        <script src="angular.js"></script>
+        <script src="table.js"></script>
+        <script type="text/javascript" src="sampleService.js"></script>
+    </body>
+</html>
