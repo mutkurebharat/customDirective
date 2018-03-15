@@ -23,11 +23,13 @@ var app = angular
     app.directive("myDirective",function(){
         return{
 
-            // scope:{
-            //      data : '&',
-            //  },
+
             templateUrl:'template.html',
-            restrict : 'A',
+            // scope : {
+            //     data : '='
+            // },
+            restrict : 'E',
+            transclude : true,
             controller: function ($scope) {
             console.log($scope)
             }
